@@ -21,5 +21,5 @@ The data set included with the assignment is based on 2014 ACS 1-year estimates:
 ## Output
 Task was to construct an interactive scatter plot which displays relationships betweeb all the factors recorded in the data provided. For details on each scatter point, a tooltip was added.
 
-Plot Access:
+Plot Access: https://alinehornoff.github.io/D3_Challenge/
 
