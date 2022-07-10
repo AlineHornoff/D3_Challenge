@@ -132,7 +132,7 @@ function updateToolTip(circlesGroup, chosenXAxis, chosenYAxis) {
             if (chosenXAxis === "income") {
                 let incomelevel = formatter(d[chosenXAxis]);
 
-                return(`${d.state}<br>${xlabel}: ${incomelevel.substring(0,.length-3)} ${xpercentsign} <br> ${ylabel}: ${d[chosenXAxis]} ${ypercentsign}`)
+                return(`${d.state}<br>${xlabel}: ${incomelevel.substring(0, incomelevel.length-3)} ${xpercentsign} <br> ${ylabel}: ${d[chosenXAxis]} ${ypercentsign}`)
             }
 
             else {
