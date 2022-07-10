@@ -1,11 +1,11 @@
 // D3 Challenge
 // @TODO: YOUR CODE HERE!
 
-// 
+// Set hight and width of plot
 const svgWidth = 960;
 const svgHeight = 500;
 
-//
+// Set margins around plot
 const margin = {
     top: 20,
     right: 40,
@@ -13,7 +13,7 @@ const margin = {
     left: 100
 };
 
-//
+// Create padding around plot
 const width = svgWidth - margin.left - margin.right;
 const height = svgHeight - margin.top - margin.bottom;
 
@@ -24,7 +24,7 @@ const svg = d3
     .attr("width", svgWidth)
     .attr("height", svgHeight + 40); //extra padding for third label
 
-// Append avg group
+// Append svg group
 const chartGroup = svg.append("g")
     .attr("tranform", `translate(${margin.left}, ${margin.top})`);
 
@@ -32,7 +32,7 @@ const chartGroup = svg.append("g")
 let chosenXAxis = "poverty";
 let chosenYAxis = "healthcare";
 
-//
+
 (async function(){
 
     // Import data
@@ -50,13 +50,13 @@ let chosenYAxis = "healthcare";
 
     // Initialise scale functions
     let xLinearScale = xScale(stateData, chosenXAxis);
-    let yLinearScale = yScale(stateData, chosenYAxis)
+    let yLinearScale = yScale(stateData, chosenYAxis);
 
     // Initialise axis functions
     let bottomAxis = d3.axisBottom(xLinearScale);
     let leftAxis = d3.axisLeft(yLinearScale);
 
-    // Append x and y axis to the chart
+    // Append x and y axes to the chart
     let xAxis = chartGroup.append("g")
         .attr("transform", `translate(0, ${height})`)
         .call(bottomAxis);
